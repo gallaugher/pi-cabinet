@@ -45,6 +45,11 @@ flash = True
 # e.g. '00:00' is midnight, '12:00' is noon, '11:00' is 11am, '23:59' is 11:59 pm
 alarm_times = ['05:00', '17:00', '22:00']
 
+# get and print the local time, just so you can be sure your Pi's timezone is set
+t = time.localtime()
+current_time = time.strftime("%H:%M:%S", t)
+print('current time:' + current_time)
+
 def job():
     led.value = True # turn light on
 
