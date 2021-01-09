@@ -31,10 +31,11 @@ import time
 import board
 import digitalio
 
-# set up door sensor
+# set up door sensor / magnetic switch
 door_sensor = digitalio.DigitalInOut(board.D23)
 door_sensor.direction = digitalio.Direction.INPUT
 door_sensor.pull = digitalio.Pull.UP
+# set up the LED
 led = digitalio.DigitalInOut(board.D24)
 led.direction = digitalio.Direction.OUTPUT
 led.value = True
